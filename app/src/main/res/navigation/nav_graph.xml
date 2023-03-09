@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.idplus.asteroideradar.main.MainFragment"
+        android:label="@string/asteroid_list" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.idplus.asteroideradar.detail.DetailFragment"
+        android:label="@string/asteroid_details" >
+        <argument
+            android:name="asteroid"
+            app:argType="com.idplus.asteroideradar.data.remote.model.Asteroid" />
+    </fragment>
+
+</navigation>
